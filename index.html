@@ -1,0 +1,1038 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" media="screen and (max-width: 543px)" href="styles-xs.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/css/intlTelInput.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+</head>
+
+<body id="body">
+  <div class="site_container" id="site_container">
+    <div class="contact" id="contactModal">
+      <div class="container">
+        <div class="contact__wrapper">
+          <form action="post" class="contact__form">
+            <div class="contact__form-container">
+              <div class="contact__form-title">
+                Давайте співпрацювати!
+                <img src="./img/wrapper-x.svg" alt="" id="contactCross">
+              </div>
+              <div class="contact__form-item">
+                <input type="text" name="name" class="contact_input" required>
+                <label for="name" class="mov">Ім'я<span class="red-star">*</span></label>
+              </div>
+              <div class="contact__form-item">
+                <input type="email" name="email" class="contact_input" required>
+                <label for="email" class="mov">Email<span class="red-star">*</span></label>
+              </div>
+              <div class="contact__form-item">
+                <input type="tel" name="phone" class="contact_input" id="contact_input_phone" required>
+                <label for="phone" class="mov" id="phoneLabel">Телефон<span class="red-star">*</span></label>
+              </div>
+              <div class="contact__form-item">
+                <input type="text" name="company" class="contact_input">
+                <label for="company" class="mov">Компанія</label>
+              </div>
+              <div class="contact__form-checkbox" >
+                <input type="checkbox" name="mycheck" required />
+                
+                <label for="mycheck">
+                  <span class="red-star">*</span> Ми додамо вашу
+                  інформацію до нашої CRM, щоб зв’язатися з вами
+                  щодо вашого запиту. Щоб дізнатися більше, ознайомтеся з нашою
+                  <a href="#">політикою конфіденційності</a>
+                </label>
+              </div>
+              <button class="cowork__form-btn btn-black" type="submit" id="cowork-btn">
+                Надіслати<img src="./img/black-btn-vector.svg" alt="" />
+            </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="burger__modal" id="modal">
+      <div class="modal__top">
+        <div class="modal__logo" >
+          <img src="./img/Logo.png" alt="" id="modalLogo" />
+        </div>
+        <div class="modal-tab" id="tabTitle"></div>
+        <div class="modal__cross" id="cross">
+          <img src="./img/x.svg" alt=""/> 
+        </div>
+      </div>
+      <div class="modal__menu" id="initial">
+        <div class="modal__menu-item link" id="services-burger">Послуги<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          </div>
+        <div class="modal__menu-item">Кейси</div>
+        <div class="modal__menu-item">Про нас</div>
+        <div class="modal__menu-item">Блог</div>
+        <div class="modal__menu-item">Контакти</div>
+      </div>
+      <div class="modal__menu" id="servicesTab">
+        <div class="modal__menu-item link">Розробка ПЗ
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Web-розробка<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Mobile<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Послуги ІТ-аутсорсингу<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Дизайн<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Маркетинг<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="modal__menu drop" id="softDev">
+        <div class="modal__menu-item link">Дослідження і розробка <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Product Development <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">CRM - системи <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">ERP - системи <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">LMS - системи <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Розробка SaaS <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">AWS Cloud <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">DevOps <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="modal__menu drop" id="webDev">
+        <div class="modal__menu-item link">WEB додатки<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Розробка сайтів <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Progressive Web App (PWA) <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Single Page <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        
+      </div>
+      <div class="modal__menu drop" id="mobDev">
+        <div class="modal__menu-item link">Розробка мобільних додатків<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        
+      </div>
+      <div class="modal__menu drop" id="marketing">
+        <div class="modal__menu-item link">Послуга SMM<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Просування в соціальних мережах<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">PPC Services<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">SEO<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="modal__menu drop" id="design">
+        <div class="modal__menu-item link">Web дизайн<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Дизайн мобільних додатків<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">UX/UI дизайн<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="modal__menu-item link">Брендінг<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="modal__menu drop" id="outsrc">
+        <div class="modal__menu-item link">Виділена команда<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 4L10 8L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header__wrapper" id="header__wrapper">
+          <div class="header__logo">
+            <img src="./img/Logo.png" alt="" />
+            <img src="./img/dark-header-logo.svg" alt="" />
+          </div>
+          <div class="header__info" id="header__info">
+            <nav class="header__info-nav" id="nav_menu">
+              <div class="header__nav-item" id="services">
+                <div class="services-container">Послуги <img src="./img/arrow-down.svg" alt="" /></div>
+                <div class="header__popup" id="header__popup">
+                  <div class="header__first">
+                    <div class="header__first-dev popup-block">
+                      <div class="header__dev-title title">Розробка ПЗ</div>
+                      <div class="header__dev-item item">
+                        Дослідження і розробка
+                      </div>
+                      <div class="header__dev-item item">
+                        Product Development
+                      </div>
+                      <div class="header__dev-item item">CRM - системи</div>
+                      <div class="header__dev-item item">ERP - системи</div>
+                      <div class="header__dev-item item">LMS - системи</div>
+                      <div class="header__dev-item item">Розробка SaaS</div>
+                      <div class="header__dev-item item">AWS Cloud</div>
+                      <div class="header__dev-item item">DevOps</div>
+                    </div>
+                  </div>
+                  <div class="header__second">
+                    <div class="header__second-web popup-block">
+                      <div class="header__web-title title">Web-розробка</div>
+                      <div class="header__web-item item">WEB додатки</div>
+                      <div class="header__web-item item">Розробка сайтів</div>
+                      <div class="header__web-item item">
+                        Progressive Web App (PWA)
+                      </div>
+                      <div class="header__web-item item">Single Page</div>
+                    </div>
+                    <div class="header__second-mobile popup-block">
+                      <div class="header__mobile-title title">Mobile</div>
+                      <div class="header__mobile-item item">
+                        Розробка мобільних додатків
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__third">
+                    <div class="header__third-outsrc popup-block">
+                      <div class="header__outsrc-title title">
+                        Послуги ІТ-аутсорсингу
+                      </div>
+                      <div class="header__outsrc-item item">
+                        Виділена команда
+                      </div>
+                    </div>
+                    <div class="header__third-design popup-block">
+                      <div class="header__design-title title">Дизайн</div>
+                      <div class="header__design-item item">Web дизайн</div>
+                      <div class="header__design-item item">
+                        Дизайн мобільних додатків
+                      </div>
+                      <div class="header__design-item item">UX/UI дизайн</div>
+                      <div class="header__design-item item">Брендинг</div>
+                    </div>
+                  </div>
+                  <div class="header__fourth">
+                    <div class="header__fourth-marketing popup-block">
+                      <div class="header__marketing-title title">
+                        Маркетинг
+                      </div>
+                      <div class="header__marketing-item item">
+                        Послуга SMM
+                      </div>
+
+                      <div class="header__marketing-item item">
+                        Просування в соціальних мережах
+                      </div>
+                      <div class="header__marketing-item item">
+                        Просування у Google
+                      </div>
+                      <div class="header__marketing-item item">SEO</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__nav-item header-link">Кейси</div>
+              <div class="header__nav-item header-link">Про нас</div>
+              <div class="header__nav-item header-link">Блог</div>
+              <div class="header__nav-item header-link">Контакти</div>
+            </nav>
+            <div class="header__info-btn btn-white" id="contact-us">
+              Зв’язатися з нами <img src="./img/arrow-up.svg" alt="" />
+            </div>
+            <div class="header__burger" id="burger">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="burger-white">
+                <path d="M5.33398 8.00001H26.6673" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M5.33398 16H26.6673" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M5.33398 24H26.6673" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="intro" id="intro">
+      <div class="container">
+        <div class="intro__wrapper">
+          <div class="intro__title">Розробка сайтів</div>
+          <div class="intro__bottom">
+            <div class="intro__bottom-desc">
+              Ми пропонуємо комплексні послуги з розробки сайтів, що
+              допоможуть вашому бізнесу залучати клієнтів, підвищувати
+              впізнаваність бренду і досягати поставлених цілей
+            </div>
+            <div class="intro__bottom-btn">
+              <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34 14.5L14 34.5" stroke="#212529" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M16 14.5H34V32.5" stroke="#212529" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              Давайте почнемо!
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="development">
+      <div class="development__border">
+        <div>
+          <img src="./img/line-1.png" alt="" />
+          <img src="./img/line-2.png" alt="" />
+          <img src="./img/line-3.png" alt="" />
+          <img src="./img/line-4.png" alt="" />
+          <img src="./img/line-5.png" alt="" />
+          <img src="./img/line-6.png" alt="" />
+          <img src="./img/line-7.png" alt="" />
+          <img src="./img/line-8.png" alt="" />
+        </div>
+        <div>
+          <img src="./img/line-1.png" alt="" />
+          <img src="./img/line-2.png" alt="" />
+          <img src="./img/line-3.png" alt="" />
+          <img src="./img/line-4.png" alt="" />
+          <img src="./img/line-5.png" alt="" />
+          <img src="./img/line-6.png" alt="" />
+          <img src="./img/line-7.png" alt="" />
+          <img src="./img/line-8.png" alt="" />
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="development__wrapper">
+          <div class="development__desc">
+            <div class="development__desc-title">Розробка лендінгів</div>
+            <div class="development__desc-subtitle">
+              Створюємо односторінкові сайти, що допоможуть швидко і ефективно
+              просувати окремі продукти чи послуги, привертаючи увагу
+              відвідувачів та стимулюючи конверсії
+            </div>
+          </div>
+          <div class="swiper swiper_1" id="swiper_1">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper" id="swiperWrapper_1">
+              <!-- Slides -->
+              <div class="swiper-slide slide-1">
+                <img src="./img/slide-1.jpg" alt="" />
+              </div> 
+              <div class="swiper-slide slide-1">
+                <img src="./img/slide-2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide slide-1">
+                <img src="./img/slide-3.jpg" alt="" />
+              </div>
+              <div class="swiper-slide slide-1">
+                <img src="./img/slide-4.jpg" alt="" />
+              </div>
+              <div class="swiper-slide slide-1">
+                <img src="./img/slide-5.jpg" alt="" />
+              </div>
+              <div class="swiper-slide slide-1">
+                <img src="./img/slide-6.jpg" alt="" />
+              </div>
+            </div>
+            <!-- If we need pagination -->
+
+            <!-- If we need navigation buttons -->
+
+            <!-- If we need scrollbar -->
+          </div>
+
+          <div class="swiper-pagination">
+            <div class="swiper-1-prev one slides">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5" stroke="#212529" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9 16L5 12" stroke="#212529" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M9 8L5 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="swiper-1-pagination"></div>
+
+            <div class="swiper-1-next one slides">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19" stroke="#212529" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M15 16L19 12" stroke="#212529" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M15 8L19 12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="corporative">
+      <div class="container">
+        <div class="corporative__wrapper">
+          <div class="corporative__desc">
+            <div class="corporative__desc-title">Корпоративні сайти</div>
+            <div class="corporative__desc-subtitle">
+              Створюємо корпоративні веб-сайти, що відображають унікальність
+              вашого бренду і надають відвідувачам повну інформацію про вашу
+              компанію та послуги
+            </div>
+          </div>
+          <div class="swiper swiper_2" id="swiper_2">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="./img/slide-1.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/slide-2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/slide-3.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/slide-4.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/slide-5.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/slide-6.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination">
+            <div class="swiper_2_prev two slides">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5" stroke="#212529" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9 16L5 12" stroke="#212529" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M9 8L5 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="swiper_2_pagination"></div>
+            <div class="swiper_2_next two slides">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19" stroke="#212529" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M15 16L19 12" stroke="#212529" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M15 8L19 12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="internet">
+      <div class="container">
+        <div class="internet__wrapper">
+          <div class="internet__desc">
+            <div class="internet__desc-title">Інтернет-магазини</div>
+            <div class="internet__desc-subtitle">
+              Створюємо сучасні та функціональні інтернет-магазини, які
+              допоможуть вашому бізнесу зростати. Зручний дизайн, просте
+              управління товарами, інтеграція з платіжними системами та
+              оптимізація для мобільних пристроїв — усе, що потрібно для
+              успішних онлайн-продажів
+            </div>
+          </div>
+          <div class="swiper swiper_3" id="swiper_3">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="./img/slide-1.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/slide-2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/slide-3.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/slide-4.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/slide-5.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/slide-6.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination">
+            <div class="swiper_3_prev three slides">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5" stroke="#212529" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9 16L5 12" stroke="#212529" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M9 8L5 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="swiper_3_pagination"></div>
+            <div class="swiper_3_next three slides">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19" stroke="#212529" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M15 16L19 12" stroke="#212529" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M15 8L19 12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="web">
+      <div class="container">
+        <div class="web__wrapper">
+          <div class="web__title">Веб портали</div>
+          <div class="web__desc">
+            Створюємо масштабовані та надійні веб-портали, які відповідають
+            вашим бізнес-потребам. Незалежно від складності, наші рішення
+            забезпечують зручний доступ до функціоналу для користувачів,
+            ефективне управління контентом і інтеграцію з необхідними
+            системами
+          </div>
+          <div class="web__create">
+            <div class="web__create-info">
+              <div class="web__create-title">Ми створюємо</div>
+              <div class="web__create-options">
+                <div class="web__create-item">
+                  <img src="./img/create-1.svg" alt="" />B2B портали
+                </div>
+                <div class="web__create-item">
+                  <img src="./img/create-2.svg" alt="" />Освітні портали
+                </div>
+                <div class="web__create-item">
+                  <img src="./img/create-3.svg" alt="" />Портали для спільнот
+                </div>
+                <div class="web__create-item">
+                  <img src="./img/create-4.svg" alt="" />Портали для
+                  управління проектами
+                </div>
+                <div class="web__create-item">
+                  <img src="./img/create-5.svg" alt="" />Портали з продажів
+                </div>
+                <div class="web__create-item">
+                  <img src="./img/create-6.svg" alt="" />Портали для
+                  співробітників
+                </div>
+                <div class="web__create-item">
+                  <img src="./img/create-7.svg" alt="" />Інформаційні портали
+                </div>
+              </div>
+            </div>
+            <div class="web__create-slider">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./img/create-slide.svg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/create-slide.svg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/create-slide.svg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/create-slide.svg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/create-slide.svg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/create-slide.svg" alt="" />
+                  </div>
+                </div>
+                <div class="pagination">
+                  <div class="swiper-button-prev slides">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 12H5" stroke="#212529" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M9 16L5 12" stroke="#212529" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M9 8L5 12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-next slides">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19" stroke="#212529" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M15 16L19 12" stroke="#212529" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M15 8L19 12" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cms">
+      <div class="back">
+        <div class="container">
+          <div class="cms__wrapper">
+            <div class="cms__title">Розробка сайтів на CMS</div>
+            <div class="cms__desc">
+              Наша експертиза розробки сайтів з використання CMS охоплює такі
+              платформи, як Magento, Shopify, WordPress тощо. Фахівці Webstick
+              Global налаштовують рішення під ваші вимоги, гарантуючи зручне
+              управління контентом і ефективне адміністрування сайту
+            </div>
+            <div class="cms__bottom">
+              <div class="cms__bottom-poster">
+                <img src="./img/computer.jpg" alt="" />
+              </div>
+              <div class="cms__bottom-grid">
+                <div class="cms__grid-item">
+                  <img src="./img/CMS.svg" alt="" />
+                </div>
+                <div class="cms__grid-item">
+                  <img src="./img/CMS-1.svg" alt="" />
+                </div>
+                <div class="cms__grid-item">
+                  <img src="./img/CMS-2.svg" alt="" />
+                </div>
+                <div class="cms__grid-item">
+                  <img src="./img/CMS-3.svg" alt="" />
+                </div>
+                <div class="cms__grid-item">
+                  <img src="./img/CMS-4.svg" alt="" />
+                </div>
+                <div class="cms__grid-item">
+                  <img src="./img/CMS-5.svg" alt="" />
+                </div>
+                <div class="cms__grid-item">
+                  <img src="./img/CMS-6.svg" alt="" />
+                </div>
+                <div class="cms__grid-item">
+                  <img src="./img/CMS-7.svg" alt="" />
+                </div>
+                <div class="cms__grid-item">
+                  <img src="./img/CMS-8.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="tech">
+      <div class="container">
+        <div class="tech__title">Технології</div>
+
+        <div class="tech__wrapper">
+          <div class="tech__menu">
+            <div class="tech__menu-item active">Мови програмування</div>
+            <div class="tech__menu-item">Backend</div>
+            <div class="tech__menu-item">Frontend</div>
+            <div class="tech__menu-item">Мобільна розробка</div>
+            <div class="tech__menu-item">Бази даних</div>
+            <div class="tech__menu-item">Надійні партнери</div>
+          </div>
+          
+        </div>
+        <div class="tech__menu-content">
+          <div class="tech__content-item">
+            <img src="./img/Technoligia.png" alt="" />
+          </div>
+        </div>
+        <div class="tech__menu-content" style="display: none">
+          <div class="tech__content-item">
+            <img src="./img/Technoligia-1.png" alt="" />
+          </div>
+        </div>
+        <div class="tech__menu-content" style="display: none">
+          <div class="tech__content-item">
+            <img src="./img/Technoligia-2.png" alt="" />
+          </div>
+        </div>
+        <div class="tech__menu-content" style="display: none">
+          <div class="tech__content-item">
+            <img src="./img/Technoligia-3.png" alt="" />
+          </div>
+        </div>
+        <div class="tech__menu-content" style="display: none">
+          <div class="tech__content-item">
+            <img src="./img/Technoligia-4.png" alt="" />
+          </div>
+        </div>
+        <div class="tech__menu-content" style="display: none">
+          <div class="tech__content-item">
+            <img src="./img/Technoligia.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cases">
+      <div class="container">
+        <div class="cases__wrapper">
+          <div class="cases__represent">
+            <div class="cases__title">Кейси Webstick</div>
+            <div class="cases__btn btn-black">
+              Усі кейси <img src="./img/black-btn-vector.svg" alt="" />
+            </div>
+          </div>
+          <div class="cases__item">
+            <div class="cases__item-info">
+              <div class="cases__item-title">
+                Crazy Vendor: розробка системи управління багатоканальною
+                торгівлею
+              </div>
+              <div class="cases__item-desc">
+                Розробка SAAS платформи, яка представляє собою набір сервісів
+                та рішень для автоматизації бізнесу, управління і збільшення
+                продажів, удосконалення маркетингу та ефективної комунікаціїї
+                з клієнтами
+              </div>
+              <div class="cases__item-abilities">
+                <div class="cases__ability_btn btn-white">
+                  Custom Software
+                </div>
+                <div class="cases__ability_btn btn-white">
+                  Product Development
+                </div>
+                <div class="cases__ability_btn btn-white">
+                  Web development
+                </div>
+                <div class="cases__ability_btn btn-white">Design</div>
+              </div>
+              <div class="cases__item-btn btn-black">
+                Ознайомитися <img src="./img/black-btn-vector.svg" alt="" />
+              </div>
+            </div>
+            <div class="cases__item-img">
+              <img src="./img/item-1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="cases__item">
+            <div class="cases__item-info">
+              <div class="cases__item-title">
+                QB Tools: розробка SaaS платформи
+              </div>
+              <div class="cases__item-desc">
+                Розробка SAAS платформи, яка представляє собою набір сервісів
+                та рішень для автоматизації бізнесу, управління і збільшення
+                продажів, удосконалення маркетингу та ефективної комунікаціїї
+                з клієнтами
+              </div>
+              <div class="cases__item-abilities">
+                <div class="cases__ability_btn btn-white">
+                  Custom Software
+                </div>
+                <div class="cases__ability_btn btn-white">
+                  Product Development
+                </div>
+                <div class="cases__ability_btn btn-white">
+                  Web development
+                </div>
+                <div class="cases__ability_btn btn-white">Mobile App</div>
+                <div class="cases__ability_btn btn-white">Design</div>
+                <div class="cases__ability_btn btn-white">Promotion</div>
+              </div>
+              <div class="cases__item-btn btn-black">
+                Ознайомитися <img src="./img/black-btn-vector.svg" alt="" />
+              </div>
+            </div>
+            <div class="cases__item-img">
+              <img src="./img/item-2.jpg" alt="" />
+            </div>
+          </div>
+          <div class="cases__item">
+            <div class="cases__item-info">
+              <div class="cases__item-title">
+                Crazy Vendor: розробка системи управління багатоканальною
+                торгівлею
+              </div>
+              <div class="cases__item-desc">
+                Розробка SAAS платформи, яка представляє собою набір сервісів
+                та рішень для автоматизації бізнесу, управління і збільшення
+                продажів, удосконалення маркетингу та ефективної комунікаціїї
+                з клієнтами
+              </div>
+              <div class="cases__item-abilities">
+                <div class="cases__ability_btn btn-white">
+                  Custom Software
+                </div>
+                <div class="cases__ability_btn btn-white">
+                  Product Development
+                </div>
+                <div class="cases__ability_btn btn-white">
+                  Web development
+                </div>
+                <div class="cases__ability_btn btn-white">Design</div>
+              </div>
+              <div class="cases__item-btn btn-black">
+                Ознайомитися <img src="./img/black-btn-vector.svg" alt="" />
+              </div>
+            </div>
+            <div class="cases__item-img">
+              <img src="./img/item-3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cowork">
+      <div class="container">
+        <div class="cowork__wrapper">
+          <div class="cowork__title">Давайте співпрацювати!</div>
+          <form class="cowork__form">
+            <div class="form-example">
+              <input type="text" name="name" id="name" required class="input"/>
+              <span class="spans">Ім'я <label class="red-star">*</label></span>
+            </div>
+            <div class="form-example">
+              <input type="email" name="email" id="email" required class="input" />
+              <span class="spans">Email <label class="red-star">*</label></span>
+            </div>
+            <div class="form-example" id="phoneInputBox">
+              <input type="tel" name="phone" id="phone-input" required class="input" tabindex="0"/>
+              <span class="spans" id="mySpan">Телефон <label class="red-star">*</label></span>
+            </div>
+            <div class="form-example">
+              <input type="text" name="company" id="company" class="input" />
+              <span class="spans">Компанія</span>
+
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="highload1" name="highload1" required/>
+              <label for="highload1" data-onlabel="on" class="form-checkbox-text">
+                <span>*</span> Ми додамо вашу
+                інформацію до нашої CRM, щоб зв’язатися з вами
+                щодо вашого запиту. Щоб дізнатися більше, ознайомтеся з нашою
+                <a href="#">політикою конфіденційності</a></label>
+            </div>
+            <button class="cowork__form-btn btn-black" type="submit" id="cowork-btn">
+              Надіслати<img src="./img/black-btn-vector.svg" alt="" />
+          </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__logo-block">
+          <div class="footer__logo">
+            <img src="./img/Logo.png" alt="" />
+          </div>
+          <div class="footer__logo-text">
+            IT-розробка та рішення, які перевершать ваші очікування
+          </div>
+        </div>
+        <div class="footer__contacts">
+          <div class="footer__contacts-imgs">
+            <div class="footer__contacts-item">
+              <img src="./img/icon_linkein.svg" alt="" />
+            </div>
+            <div class="footer__contacts-item">
+              <img src="./img/icon_instagram.svg" alt="" />
+            </div>
+            <div class="footer__contacts-item">
+              <img src="./img/clutch.svg" alt="" />
+            </div>
+          </div>
+          <div class="footer__contacts-initials">
+            <div class="footer__contacts-text">© 2014 Webstick Global</div>
+            <div class="footer__contacts-text">
+              Політика конфіденційності
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const swiper_1 = new Swiper(".swiper_1", {
+      direction: "horizontal",
+      loop: true,
+
+      pagination: {
+        el: ".swiper-1-pagination",
+        type: "fraction",
+      },
+
+      navigation: {
+        nextEl: ".swiper-1-next",
+        prevEl: ".swiper-1-prev",
+      },
+
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
+
+    const swiper_2 = new Swiper(".swiper_2", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper_2_pagination",
+        type: "fraction",
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper_2_next",
+        prevEl: ".swiper_2_prev",
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
+
+    const swiper_3 = new Swiper(".swiper_3", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper_3_pagination",
+        type: "fraction",
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper_3_next",
+        prevEl: ".swiper_3_prev",
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
+
+    const webSwiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    swiper_1.on("slideChange", () => {
+      document.getElementById("swiper_1").scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+
+    swiper_2.on("slideChange", () => {
+      document.getElementById("swiper_2").scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+
+    swiper_3.on("slideChange", () => {
+      document.getElementById("swiper_3").scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  </script>
+  <script src="js/tech.js"></script>
+  <script src="js/scrollToTop.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/stickyMenu.js"></script>
+  <script src="js/topTop.js"></script>
+  <script src="js/changeTab.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/intlTelInput.min.js"></script>
+  <script src="js/showContact.js"></script>
+  <script src="./js/intltel.js"></script>
+    
+</body>
+
+</html>
